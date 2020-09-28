@@ -1,0 +1,19 @@
+{
+  "name": "noaa-forecasts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gifs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jimwhimpey/noaa-forecasts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jimwhimpey/noaa-forecasts/issues"
+  },
+  "homepage": "https://github.com/jimwhimpey/noaa-forecasts#readme"
+}
