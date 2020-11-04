@@ -4,7 +4,7 @@ const { exec } = require("child_process");
 fs.readdir('assets/rain', (err, files) => {
 	const rainLast7Days = files.sort().reverse().slice(0, 7).reverse().map((name) => `assets/rain/${name}`);
 	const rainLast30Days = files.sort().reverse().slice(0, 30).reverse().map((name) => `assets/rain/${name}`);
-	exec(`convert -delay 50 -loop 0 ${rainLast7Days.join(' ')} rainLast7days.gif`, (error, stdout, stderr) => {
+	exec(`convert -delay 100 -loop 0 ${rainLast7Days.join(' ')} rainLast7days.gif`, (error, stdout, stderr) => {
 		if (error) {
 			console.log(`error: ${error.message}`);
 			return;
@@ -31,7 +31,7 @@ fs.readdir('assets/rain', (err, files) => {
 fs.readdir('assets/temp', (err, files) => {
 	const last7Days = files.sort().reverse().slice(0, 7).reverse().map((name) => `assets/temp/${name}`);
 	const last30Days = files.sort().reverse().slice(0, 30).reverse().map((name) => `assets/temp/${name}`);
-	exec(`convert -delay 50 -loop 0 ${last7Days.join(' ')} tempLast7days.gif`, (error, stdout, stderr) => {
+	exec(`convert -delay 100 -loop 0 ${last7Days.join(' ')} tempLast7days.gif`, (error, stdout, stderr) => {
 		if (error) {
 			console.log(`error: ${error.message}`);
 			return;
