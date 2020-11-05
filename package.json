@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/jimwhimpey/noaa-forecasts/issues"
   },
-  "homepage": "https://github.com/jimwhimpey/noaa-forecasts#readme"
+  "homepage": "https://github.com/jimwhimpey/noaa-forecasts#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "moment": "^2.29.1"
+  }
 }

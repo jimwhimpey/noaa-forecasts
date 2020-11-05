@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        {{#each forecastDays}}
+            <th>{{this.friendly}}</th>
+        {{/each}}
+    </tr>
+    {{#each forecasts}}
+        <tr>
+            {{#each this}}
+                <td><img width="400" src="rain/{{this}}" /></td>   
+            {{/each}}
+        </tr>
+    {{/each}}
+</table>
