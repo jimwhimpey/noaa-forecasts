@@ -1,13 +1,17 @@
-<table>
+<table cellpadding="0" cellspacing="0">
     <tr>
+        <th>&nbsp;</th>
         {{#each forecastDays}}
             <th>{{this.friendly}}</th>
         {{/each}}
     </tr>
     {{#each forecasts}}
-        <tr>
-            {{#each this}}
-                <td><img width="400" src="rain/{{this}}" /></td>   
+        <tr class="c-forecast-row">
+            <td class="c-forecast-when">{{when}}</td>
+            {{#each images}}
+                <td class="c-forecast-img">
+                    <div class="c-img" style="background-image: url(rain/{{this}});"></div>
+                </td>   
             {{/each}}
         </tr>
     {{/each}}

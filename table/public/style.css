@@ -1,0 +1,35 @@
+body {
+	font-family: 'Operator Mono', Menlo, Consolas, monospace;
+}
+
+th {
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+}
+
+th:first-child {
+	border-left: none;
+}
+
+.c-forecast-row td {
+	border-bottom: 1px solid #ccc;
+	padding: 10px;
+}
+
+.c-forecast-img {
+	border-left: 1px solid #ccc;
+}
+
+.c-img {
+	width: 200px;
+	height: 140px;
+	background-size: 344px;
+	background-repeat: no-repeat;
+	background-position: -82px -147px;
+}
+
+.c-forecast-when {
+	font-size: 12px;
+	text-align: right;
+}

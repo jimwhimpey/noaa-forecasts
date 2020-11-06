@@ -8,6 +8,7 @@ const app = express();
 const port = 4000;
 
 app.use(express.static(path.join(__dirname, '..', 'assets')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', exphbs());
 app.set('views', `${__dirname}/views`);
 app.set('view engine', 'handlebars');
@@ -20,7 +21,7 @@ app.get('/', (req, res) => {
 		const today = moment();
 		const forecastDays = [];
 
-		for (let i = 0; i < 12; i++) {
+		for (let i = 0; i < 6; i++) {
 			const forecastDate = today.add(1, 'days');
 			const format = i === 0 ? '[Tomorrow]' : 'ddd';
 			forecastDays.push({
@@ -29,15 +30,14 @@ app.get('/', (req, res) => {
 			});
 		}
 
-		const forecasts = [[], [], [], [], [], [], []];
+		const forecasts = [{}, {}, {}, {}, {}, {}, {}];
 
 		forecasts.map((row, i) => {
-			forecasts[i] = forecastDays.map((day, j) => {
+			forecasts[i].when = `${i + 8} days ago`;
+			forecasts[i].images = forecastDays.map((day, j) => {
 				return filesSortedByLatest[5 + i - j];
 			});
 		});
-
-		console.log('xxx forecasts', forecasts);
 
 		res.render('home', {
 			forecastDays,
